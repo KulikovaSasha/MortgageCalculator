@@ -10,12 +10,12 @@ jobs:
         run: pip install -r requirements.txt
       - name: Test application
         run: python -m unittest discover -v
-  lint:
+   build:
     runs-on: ubuntu-latest
     steps:
       - name: Get the repository cod
         uses: actions/checkout@v4
       - name: Install dependecies
         run: pip install -r requirements.txt
-      - name: Lint application
-        run: pylint
+      - name: Build application
+        run: python -m build
