@@ -7,6 +7,6 @@ jobs:
       - name: Get the repository cod
         uses: actions/checkout@v4
       - name: Install dependecies
-        run: npm install
+        run: pip install
       - name: Test application
-        run: npm run test
+        run: pip run test
