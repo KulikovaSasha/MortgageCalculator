@@ -9,6 +9,6 @@ jobs:
       - name: Install dependecies
         run: |
           pip freeze > requirements.txt
-          pip install -r pyproject.toml
+          pip install -r requirements.txt
       - name: Test application
         run: pip run test
