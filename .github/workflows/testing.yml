@@ -10,7 +10,7 @@ jobs:
         run: pip install -r requirements.txt
       - name: Test application
         run: python -m unittest discover -v
-   build:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Get the repository cod
