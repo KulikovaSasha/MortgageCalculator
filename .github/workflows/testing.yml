@@ -18,4 +18,6 @@ jobs:
       - name: Install dependecies
         run: pip install -r requirements.txt
       - name: Build application
-        run: python -m build -v
+        run: |
+          pip install build
+          python -m build -v
