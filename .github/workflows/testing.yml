@@ -8,7 +8,7 @@ jobs:
         uses: actions/checkout@v4
       - name: Install dependecies
         run: |
-          pip freeze
+          pip pip freeze > requirements.txt
           pip install -r pyproject.toml
       - name: Test application
         run: pip run test
