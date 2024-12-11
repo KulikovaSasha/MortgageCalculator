@@ -1,0 +1,21 @@
+name: Deploy React App
+on: push
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get the repository cod
+        uses: actions/checkout@v4
+      - name: Install dependecies
+        run: pip install -r requirements.txt
+      - name: Test application
+        run: python -m unittest discover -v
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get the repository cod
+        uses: actions/checkout@v4
+      - name: Install dependecies
+        run: pip install -r requirements.txt
+      - name: Build application
+        run: python -m build
